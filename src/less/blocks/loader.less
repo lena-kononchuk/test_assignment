@@ -1,0 +1,57 @@
+
+.loading
+{
+   position: absolute;
+   left: 50%;
+   bottom: 0%;
+   pointer-events: none;
+
+    &,
+    *
+    {
+        user-select: none;
+
+        color: transparent !important;
+    }
+
+    *
+    {
+        opacity: 0;
+    }
+
+    &:before
+    {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+
+        box-sizing: border-box;
+        width: (@gap * 1.2);
+        height: (@gap * 1.2);
+        margin-top: ((@gap * 1.2) / -5);
+        margin-left: ((@gap * 1.2) / -2);
+
+        content: '';
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        border: 2px solid @blue;
+        border-top-color: transparent !important;
+        border-radius: 50%;
+    }
+}
+
+@keyframes loading
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}

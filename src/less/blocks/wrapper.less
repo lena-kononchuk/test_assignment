@@ -1,0 +1,28 @@
+.wrapper
+{
+
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1440px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: @gap * 1.5;
+      padding-left: @gap * 1.5;
+
+      &__full
+      {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
+
+
+      .xxs({
+         padding-right: (@gap / 3.5);
+         padding-left: (@gap / 3.5);
+      });
+      &__small
+      {
+         max-width: 380px;
+      }
+
+}

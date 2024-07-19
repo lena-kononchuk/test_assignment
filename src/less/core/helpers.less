@@ -1,0 +1,72 @@
+.flex
+{
+   display: flex;
+   gap: 20px;
+}
+
+.pointer
+{
+   cursor: pointer !important;
+}
+.box-small:not(:last-child)
+{
+   margin-bottom: 11px;
+}
+.box:not(:last-child)
+{
+   margin-bottom: 20px;
+}
+
+.box2x:not(:last-child)
+{
+   margin-bottom: @gap * 1.25px;
+}
+.box3x:not(:last-child)
+{
+    margin-bottom: @gap * .8px;
+}
+
+.white
+{
+   color: @white;
+}
+.black
+{
+   color: @black;
+}
+// hr
+// {
+//    border: 0;
+//    border-bottom: 1px solid fade(@QGold, 15%);
+// }
+.flex-vertical {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.image (@path)
+{
+   background-image: url('~@/assets/images/@{path}');
+}
+
+.no-webkit-appearance ()
+{
+   -webkit-tap-highlight-color: transparent;
+   -webkit-appearance: none;
+      -moz-appearance: none;
+            appearance: none;
+}
+
+.grow
+{
+   flex-grow: 1 !important;
+}
+
+.block
+{
+   display: block !important;
+}
+.relative
+{
+   position: relative;
+}

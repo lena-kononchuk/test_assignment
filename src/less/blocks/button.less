@@ -1,0 +1,35 @@
+.button{
+      font-size: 16px !important;
+      font-weight: 400;
+      font-family: 'Nunito', sans-serif;
+      display: inline-block;
+
+      box-sizing: border-box;
+
+      padding: 4px 23px !important;;
+      min-width: 88px;
+      line-height: 26px;
+
+      border-radius: 80px !important;
+
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+
+      white-space: nowrap;
+      border: none;
+
+      color: @black;
+      background-color: #F4E041;
+         &:hover{
+            background: #FFE302;
+         }
+
+      &[disabled='']
+      {
+         pointer-events: none;
+         color: @white;
+         background: #B4B4B4;
+      }
+
+}

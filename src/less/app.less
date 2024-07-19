@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import (css) 'flexboxgrid/dist/flexboxgrid.css';
+@import (css) 'normalize.css/normalize.css';
+
+
+
+@yellow: #F4E041;
+@blue:#00BDD3;
+@black:#000000DE;
+@red:#CB3D40;
+@white: #ffff;
+@duration: .3s;
+@gap:40px;
+
+
+body
+{
+   font-family: 'Nunito', sans-serif;
+   font-size: 16px;
+
+   margin: 0;
+   padding: 0;
+
+   background-color: #F8F8F8;
+}
+
+html,
+body {
+   scroll-behavior: smooth !important;
+   overflow-x: hidden;
+}
+
+*
+{
+   touch-action: manipulation;
+}
+
+.logo {
+   background-image: url('../assets/logo.svg'); 
+   display: inline-block;
+   flex-grow: 0;
+
+   width: 104px;
+   height: 26px;
+
+   background-repeat: no-repeat;
+   background-position: left center;
+   background-size: contain;
+}
+.header
+{
+   padding-top: 13px;
+   padding-bottom: 13px;
+   display: flex;
+   align-items: center;
+}
+.text a,
+.link
+{
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+}
+.form
+{
+   max-width: 380px;
+   margin: 0 auto
+}
+
+.images
+{
+   height: 70px;
+   aspect-ratio: 1;
+   border-radius: 50%;
+}
+
+
+
+@import 'core/helpers';
+@import 'core/responsiveness';
+@import 'core/typography';
+@import 'core/typography';
+
+@import 'blocks/button';
+@import 'blocks/card';
+@import 'blocks/input';
+@import 'blocks/section';
+@import 'blocks/wrapper';
+@import 'blocks/hero';
+@import 'blocks/loader';
