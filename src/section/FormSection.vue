@@ -6,8 +6,8 @@
          <!-- Success message after form submission -->
          <div v-if="isSubmitted" class="center-xs">
             <div class="h1 box2x">User successfully registered</div>
-            <div class="images box" style="margin: 0 auto;">
-               <img :src="successImage" alt="Success Image">
+            <div style="margin: 0 auto;">
+               <img :src="successImage" alt="Success Image" class="box">
             </div>
          </div>
 
