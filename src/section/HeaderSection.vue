@@ -9,7 +9,7 @@
             <!-- Button to scroll to the 'user' section -->
             <a @click.prevent="scrollToSection('user')" class="button" aria-label="user">Users</a>
             <!-- Button to scroll to the 'form' section -->
-            <a @click.prevent="scrollToSection('form')" class="button" aria-label="form">Sign up</a>
+            <a @click.prevent="scrollToSection('form')" class="button" aria-label="Sign up for the form">Sign up</a>
           </div>
         </div>
       </div>

@@ -30,7 +30,8 @@
 
             <!-- Show more button -->
             <div v-else style="margin: 0 auto;">
-               <button v-if="showMoreButton" @click="loadMoreUsers" class="button">Show more</button>
+               <button v-if="showMoreButton" @click="loadMoreUsers" class="button" aria-label="Show more user">Show
+                  more</button>
             </div>
          </div>
       </div>

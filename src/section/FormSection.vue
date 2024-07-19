@@ -16,12 +16,12 @@
             <div class="h1 black center-xs box2x">Working with POST request</div>
 
             <form @submit.prevent="submitForm" enctype="multipart/form-data" method="POST" class="form">
-
                <!-- Input for name -->
                <div class="box2x relative">
                   <input type="text" id="name" v-model="formData.name" class="input"
                      :class="{ 'input--error': formData.name && !isNameValid }" @focus="handleFocus('name')"
-                     @blur="handleBlur('name')" :maxlength="60" :disabled="formIsSubmitting || isLoading">
+                     @blur="handleBlur('name')" :maxlength="60" :disabled="formIsSubmitting || isLoading"
+                     tabindex="1" />
                   <label for="name" class="input__label"
                      :class="{ 'active': isInputActive.name || formData.name, 'label--error': formData.name && !isNameValid }">
                      Your name
@@ -34,7 +34,8 @@
                <div class="box2x relative">
                   <input type="email" id="email" v-model="formData.email" class="input"
                      :class="{ 'input--error': formData.email && !isEmailValid }" @focus="handleFocus('email')"
-                     @blur="handleBlur('email')" :maxlength="160" :disabled="formIsSubmitting || isLoading">
+                     @blur="handleBlur('email')" :maxlength="160" :disabled="formIsSubmitting || isLoading"
+                     tabindex="2" />
                   <label for="email" class="input__label"
                      :class="{ 'active': isInputActive.email || formData.email, 'label--error': formData.email && !isEmailValid }">
                      Email
@@ -43,15 +44,15 @@
                </div>
 
                <!-- Input for phone with masking -->
-
                <custom-input-phone :class="phoneClass" v-model="formData.phone" :is-valid="isPhoneValid"
-                  :disabled="formIsSubmitting || isLoading"></custom-input-phone>
+                  :disabled="formIsSubmitting || isLoading" tabindex="3"></custom-input-phone>
+
                <!-- Radio buttons for selecting position -->
                <div class="box2x radio">
                   <div class="box-small">Select your position</div>
                   <div v-for="(position, index) in positions" :key="position.id" class="box-small">
                      <input type="radio" v-model="formData.position_id" :value="position.id" :id="'position-' + index"
-                        class="radio__hidden" :disabled="formIsSubmitting || isLoading">
+                        class="radio__hidden" :disabled="formIsSubmitting || isLoading" tabindex="4" />
                      <label :for="'position-' + index" class="radio__custom">
                         <span class="radio__icon text"></span>{{ position.name }}
                      </label>
@@ -62,7 +63,8 @@
                <div class="box2x file">
                   <label class="file__label">
                      <input type="file" class="pointer" @change="handleFileUpload"
-                        accept="image/png, image/gif, image/jpeg" :disabled="formIsSubmitting || isLoading" />
+                        accept="image/png, image/gif, image/jpeg" :disabled="formIsSubmitting || isLoading"
+                        tabindex="5" />
                      <span>Upload</span>
                   </label>
                   <span class="file__text">{{ formData.photoName || "Upload your photo" }}</span>
@@ -72,12 +74,13 @@
                <!-- Submit button -->
                <div class="flex middle-xs center-xs">
                   <button :disabled="formIsSubmitting || !isFieldValid" :class="{ loading: formIsSubmitting }"
-                     type="submit" class="button">
+                     type="submit" class="button" tabindex="6">
                      <span v-if="formIsSubmitting">Submitting...</span>
                      <span v-else>Sign up</span>
                   </button>
                </div>
             </form>
+
          </div>
       </div>
    </section>

@@ -14,7 +14,8 @@
           Front-End Development keeps evolving.
         </div>
         <!-- Button to scroll to the sign-up form -->
-        <a href="#form" class="button" @click.prevent="scrollToSection('form')">Sign up</a>
+        <a href="#form" class="button" @click.prevent="scrollToSection('form')" aria-label="Sign up for the form">Sign
+          up</a>
       </div>
     </div>
   </div>
